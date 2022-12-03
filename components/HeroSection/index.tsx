@@ -82,7 +82,7 @@ const index = () => {
 
           <p className="mt-6 text-secondary-gray">
             I am a developer with years of industry experience building
-            responsive and mobile-first websites and web applications for local
+            responsive, mobile-first websites and web applications for local
             businesses and start-up companies. I specialize in JavaScript and
             have professional experience working with React.js, Next.js and
             Tailwind CSS.
