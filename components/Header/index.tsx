@@ -9,15 +9,11 @@ const index = () => {
       </div>
       <nav className="h-full">
         <ul className="flex items-center h-full">
-          <NavLink label="_hello" selected={true} />
-          <NavLink label="_about-me" selected={false} />
+          <NavLink label="_about-me" selected={true} />
           <NavLink label="_projects" selected={false} />
         </ul>
       </nav>
       <div className="flex-1 border-b border-primary-border h-full"></div>
-      <p className="flex items-center text-secondary-gray  px-6 border-l border-b border-primary-border   h-full hover:text-white hover:border-b-2 hover:border-b-accent-orange transition-all duration-300 ease-out cursor-pointer">
-        _contact-me
-      </p>
     </header>
   );
 };

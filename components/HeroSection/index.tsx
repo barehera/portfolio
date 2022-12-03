@@ -1,44 +1,120 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Typewriter from "typewriter-effect";
+import BackgroundSpinningAnimation from "./BackgroundSpinningAnimation";
+import CodeSnippetPersonClass from "./CodeSnippetPersonClass";
+import nextIcon from "../../assets/next.png";
+import reactIcon from "../../assets/react.png";
+import nodeIcon from "../../assets/node.png";
+import tailwindIcon from "../../assets/tailwind.png";
+import javascriptIcon from "../../assets/javascript.png";
+import typescriptIcon from "../../assets/typescript.png";
+import mongodbIcon from "../../assets/mongodb.png";
+import firebaseIcon from "../../assets/firebase.png";
+import Hexagon from "./Hexagon";
 
 const index = () => {
+  const [mouseDirectionX, setMouseDirectionX] = useState("");
+  const [mouseDirectionY, setMouseDirectionY] = useState("");
+  useEffect(() => {
+    const handleMouseMove = (event: any) => {
+      const { movementX, movementY }: any = event;
+
+      if (movementX < 0 && !movementY) {
+        setMouseDirectionX(`translate-x-[60px]  `);
+      } else if (movementX > 0 && !movementY) {
+        setMouseDirectionX(`translate-x-[-60px] `);
+      } else if (!movementX && movementY > 0) {
+        setMouseDirectionY(`translate-y-[-60px] `);
+      } else if (!movementX && movementY < 0) {
+        setMouseDirectionY(`translate-y-[60px] `);
+      } else if (movementX < 0 && movementY < 0) {
+        setMouseDirectionY(`translate-y-[60px] `);
+        setMouseDirectionX(`translate-x-[60px] `);
+      } else if (movementX > 0 && movementY < 0) {
+        setMouseDirectionY(`translate-y-[60px] `);
+        setMouseDirectionX(`-translate-x-[60px]`);
+      } else if (movementX > 0 && movementY > 0) {
+        setMouseDirectionY(`-translate-y-[60px] `);
+        setMouseDirectionX(`-translate-x-[60px]`);
+      } else if (movementX < 0 && movementY > 0) {
+        setMouseDirectionY(`-translate-y-[60px] `);
+        setMouseDirectionX(`translate-x-[60px] `);
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
   return (
-    <section className="px-60 grid grid-cols-2 items-center gap-6">
-      <div className="flex flex-col ">
-        <article className="mb-12">
-          <p className="text-lg text-[#E5E9F0]">Hi all. I am</p>
-          <h1 className="text-5xl mb-2">Cagan Buyukavcilar</h1>
-          <h2 className="text-secondary-blue  text-2xl">
-            {`>`} Front-end developer
+    <section className="px-40 grid grid-cols-12 items-center  gap-20 ">
+      <div className="flex flex-col col-span-5">
+        <article className="mb-6 z-50">
+          <p className="text-lg text-[#E5E9F0]">Hi, I am</p>
+          <h1 className="text-5xl mb-2">Çağan Büyükavcılar</h1>
+          <h2 className="flex items-center gap-1 text-secondary-blue  text-2xl">
+            {`>`}
+            <Typewriter
+              options={{
+                cursor: "",
+                loop: true,
+              }}
+              onInit={(typewriter) => {
+                typewriter
+                  .changeDelay(100)
+                  .typeString("Front-end developer")
+                  .pauseFor(1000)
+                  .deleteAll()
+                  .typeString("Back-end developer")
+                  .pauseFor(1000)
+                  .deleteAll()
+                  .typeString("Full-stack developer")
+                  .pauseFor(1000)
+                  .deleteAll()
+                  .start();
+              }}
+            />
           </h2>
-        </article>
-        <article className="flex flex-col gap-1">
-          <p className="text-secondary-gray">
-            // complete the game to continue
-          </p>
-          <p className="text-secondary-gray">
-            // you can also see it on my Github Page
-          </p>
-          <p>
-            <span className="text-secondary-blue">const</span>{" "}
-            <span className="text-accent-green">githubLink</span> ={" "}
-            <Link
-              href="https://github.com/barehera/discord-clone"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent-orange cursor-pointer hover:underline "
-            >
-              "https://github.com/barehera/discord-clone"
-            </Link>
+
+          <p className="mt-6 text-secondary-gray">
+            I am a developer with years of industry experience building
+            responsive and mobile-first websites and web applications for local
+            businesses and start-up companies. I specialize in JavaScript and
+            have professional experience working with React.js, Next.js and
+            Tailwind CSS.
           </p>
         </article>
+        {/* <button className="px-6 py-3 rounded-2xl bg-secondary-gray bg-opacity-10 hover:bg-opacity-30 transition-all duration-300 ease-out">
+          Projects
+        </button> */}
       </div>
-      <div className="relative ">
-        <div className="flex items-center justify-center text-4xl bg-white bg-opacity-10 h-96  p-6 rounded-2xl ">
-          GAME HERE
+      <div className="relative flex items-center justify-center  h-full col-span-7">
+        <div
+          className={`${mouseDirectionX} ${mouseDirectionY} absolute z-10  transition-all duration-[5s] ease-out`}
+        >
+          <div className="relative flex gap-1">
+            <div className="absolute top-20 left-12">
+              <Hexagon image={nextIcon.src} />
+            </div>
+            <Hexagon image={reactIcon.src} />
+            <Hexagon image={nodeIcon.src} />
+            <div className="absolute -top-20 left-[8.8rem]">
+              <Hexagon image={tailwindIcon.src} />
+            </div>
+            <Hexagon image={typescriptIcon.src} />
+
+            <Hexagon image={javascriptIcon.src} />
+            <div className="absolute top-20 -right-12">
+              <Hexagon image={mongodbIcon.src} />
+            </div>
+            <Hexagon image={firebaseIcon.src} />
+          </div>
         </div>
-        <div className="absolute -top-48 -left-20 bg-accent-green w-96 h-96 blur-[190px]"></div>
-        <div className="absolute -bottom-48 right-0 w-96 h-96 bg-accent-purple blur-[190px]"></div>
+        <BackgroundSpinningAnimation />
       </div>
     </section>
   );

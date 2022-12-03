@@ -12,8 +12,8 @@ const Home: NextPage = () => {
         <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="p-10 bg-primary-dark min-h-screen text-white ">
-        <div className="flex flex-col  justify-between max-w-[120rem] mx-auto bg-primary-light-blue rounded-lg h-[calc(100vh_-_5rem)] border border-primary-border">
+      <main className="p-4 bg-primary-dark min-h-screen text-white select-none overflow-hidden">
+        <div className="flex flex-col overflow-hidden  justify-between max-w-[120rem] mx-auto bg-primary-light-blue rounded-lg h-[calc(100vh_-_2rem)] border border-primary-border">
           <Header />
           <HeroSection />
           <Footer />

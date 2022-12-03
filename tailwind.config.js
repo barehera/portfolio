@@ -27,6 +27,10 @@ module.exports = {
         subheadline: "32px",
         headline: "62px",
       },
+      animation: {
+        "spin-slow": "spin 15s linear infinite",
+        "pulse-slow": "pulse 10s linear infinite",
+      },
     },
   },
   plugins: [],
