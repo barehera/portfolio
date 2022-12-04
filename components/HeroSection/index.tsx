@@ -16,7 +16,7 @@ import Hexagon from "./Hexagon";
 const index = () => {
   const [mouseDirectionX, setMouseDirectionX] = useState("");
   const [mouseDirectionY, setMouseDirectionY] = useState("");
-  const [rotateDirection, setRotateDirection] = useState("lg:-rotate-12");
+  const [rotateDirection, setRotateDirection] = useState("");
 
   let rotated = false;
   useEffect(() => {
@@ -24,17 +24,17 @@ const index = () => {
       const { movementX, movementY }: any = event;
 
       if (movementX < 0 && movementY < 0) {
-        setMouseDirectionY(`lg:translate-y-[40px]`);
-        setMouseDirectionX(`lg:translate-x-[40px] `);
-      } else if (movementX > 0 && movementY < 0) {
-        setMouseDirectionY(`lg:translate-y-[40px] `);
-        setMouseDirectionX(`lg:-translate-x-[40px]`);
-      } else if (movementX > 0 && movementY > 0) {
         setMouseDirectionY(`lg:-translate-y-[40px]`);
-        setMouseDirectionX(`lg:-translate-x-[40px]`);
-      } else if (movementX < 0 && movementY > 0) {
+        setMouseDirectionX(`lg:-translate-x-[40px] `);
+      } else if (movementX > 0 && movementY < 0) {
         setMouseDirectionY(`lg:-translate-y-[40px] `);
-        setMouseDirectionX(`lg:translate-x-[40px] `);
+        setMouseDirectionX(`lg:translate-x-[40px]`);
+      } else if (movementX > 0 && movementY > 0) {
+        setMouseDirectionY(`lg:translate-y-[40px]`);
+        setMouseDirectionX(`lg:translate-x-[40px]`);
+      } else if (movementX < 0 && movementY > 0) {
+        setMouseDirectionY(`lg:translate-y-[40px] `);
+        setMouseDirectionX(`lg:-translate-x-[40px] `);
       }
       if (rotated === false) {
         setRotateDirection((prev) =>
