@@ -5,7 +5,7 @@ import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 
 const index = () => {
   return (
-    <footer className="flex items-center h-12 ">
+    <footer className="flex items-center h-12 z-10">
       <div className="hidden lg:flex items-center pl-6 h-full  text-lables text-secondary-gray border-t border-r px-6 border-primary-border ">
         find me in:
       </div>

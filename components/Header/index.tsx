@@ -7,7 +7,7 @@ const index = () => {
   const [showSidebar, setShowSidebar] = useState(false);
 
   return (
-    <header className="flex items-center h-12 ">
+    <header className="flex items-center h-12 z-10">
       <div className="flex items-center pl-6 h-full  text-lables text-secondary-gray border-b lg:border-r pr-6 lg:pr-24 border-primary-border rounded-tl-lg whitespace-nowrap">
         cagan-buyukavcilar
       </div>
