@@ -43,7 +43,7 @@ const index = () => {
         rotated = true;
         setTimeout(() => {
           rotated = false;
-        }, 3000);
+        }, 2000);
       }
     };
 
