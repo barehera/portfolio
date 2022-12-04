@@ -28,7 +28,7 @@ module.exports = {
         headline: "62px",
       },
       animation: {
-        "spin-slow": "spin 15s linear infinite",
+        "spin-slow": "spin 25s linear infinite",
         "pulse-slow": "pulse 10s linear infinite",
       },
     },

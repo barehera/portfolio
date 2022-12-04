@@ -57,7 +57,7 @@ const index = () => {
   return (
     <section className=" px-6  lg:px-24 grid lg:grid-cols-12 items-center lg:gap-12">
       <div className="flex flex-col lg:col-span-5">
-        <article className="mb-6 z-50">
+        <article className="mb-6">
           <p className="text-base lg:text-lg text-[#E5E9F0]">Hi, I am</p>
           <h1 className="text-3xl lg:text-5xl mb-2">Çağan Büyükavcılar</h1>
           <h2 className="flex items-center gap-1 text-secondary-blue text-lg  lg:text-2xl">
@@ -95,7 +95,7 @@ const index = () => {
       </div>
       <div className=" relative flex lg:items-center lg:justify-center h-full lg:col-span-7 ">
         <div
-          className={`${mouseDirectionX} ${mouseDirectionY} ${rotateDirection} relative lg:absolute z-10  transition-all duration-[7s] ease-out`}
+          className={`${mouseDirectionX} ${mouseDirectionY} ${rotateDirection} relative lg:absolute  transition-all duration-[7s] ease-out`}
         >
           <div className="relative flex  flex-wrap lg:flex-nowrap gap-2 lg:gap-1 ">
             <div className="lg:absolute top-20 left-12">
