@@ -38,7 +38,7 @@ const index = () => {
       }
       if (rotated === false) {
         setRotateDirection((prev) =>
-          prev === "-rotate-45" ? "rotate-45" : "-rotate-45"
+          prev === "lg:-rotate-45" ? "lg:rotate-45" : "lg:-rotate-45"
         );
         rotated = true;
         setTimeout(() => {
