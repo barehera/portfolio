@@ -4,8 +4,14 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
+import { useEffect, useState } from "react";
 
 const Home: NextPage = () => {
+  const [showScreen, setShowScreen] = useState(false);
+  useEffect(() => {
+    setShowScreen(true);
+  }, []);
+
   return (
     <>
       <Head>
@@ -13,7 +19,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="p-4 bg-primary-dark min-h-screen text-white select-none overflow-hidden">
-        <div className="flex flex-col overflow-hidden  justify-between max-w-[120rem] mx-auto bg-primary-light-blue rounded-lg h-[calc(100vh_-_2rem)] border border-primary-border">
+        <div
+          className={`${
+            showScreen ? "scale-100 opacity-100" : "scale-0 opacity-0"
+          } flex flex-col overflow-hidden  justify-between max-w-[120rem] mx-auto bg-primary-light-blue rounded-lg h-[calc(100vh_-_2rem)] border border-primary-border transition-all duration-1000 ease-out`}
+        >
           <Header />
           <HeroSection />
           <Footer />
