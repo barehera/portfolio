@@ -16,7 +16,7 @@ import Hexagon from "./Hexagon";
 const index = () => {
   const [mouseDirectionX, setMouseDirectionX] = useState("");
   const [mouseDirectionY, setMouseDirectionY] = useState("");
-  const [rotateDirection, setRotateDirection] = useState("-rotate-45");
+  const [rotateDirection, setRotateDirection] = useState("lg:-rotate-45");
 
   let rotated = false;
   useEffect(() => {
