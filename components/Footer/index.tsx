@@ -6,7 +6,7 @@ import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 const index = () => {
   return (
     <footer className="flex items-center h-12 ">
-      <div className="flex items-center pl-6 h-full  text-lables text-secondary-gray border-t border-r px-6 border-primary-border ">
+      <div className="hidden lg:flex items-center pl-6 h-full  text-lables text-secondary-gray border-t border-r px-6 border-primary-border ">
         find me in:
       </div>
       <nav className="h-full flex">
@@ -39,9 +39,6 @@ const index = () => {
         </Link>
       </nav>
       <div className="flex-1 border-t border-primary-border h-full "></div>
-      <p className="flex items-center text-secondary-gray  px-6 border-l border-t border-primary-border   h-full hover:text-white border-b-transparent border-b-2 hover:border-b-accent-orange transition-all duration-300 ease-out cursor-pointer">
-        _contact-me
-      </p>
     </footer>
   );
 };

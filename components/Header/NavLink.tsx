@@ -12,7 +12,7 @@ const NavLink = ({ selected, label }: IProps) => {
 
   return (
     <li
-      className={`${selectedStyle} flex items-center text-secondary-gray px-6 border-r border-b  border-primary-border h-full hover:text-white  hover:border-b-accent-orange transition-all duration-300 ease-out cursor-pointer`}
+      className={`${selectedStyle} py-6 lg:py-0 flex items-center text-secondary-gray px-6 border-r border-b  border-primary-border h-full hover:text-white  hover:border-b-accent-orange transition-all duration-300 ease-out cursor-pointer whitespace-nowrap`}
     >
       {label}
     </li>

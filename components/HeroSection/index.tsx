@@ -16,30 +16,34 @@ import Hexagon from "./Hexagon";
 const index = () => {
   const [mouseDirectionX, setMouseDirectionX] = useState("");
   const [mouseDirectionY, setMouseDirectionY] = useState("");
+  const [rotateDirection, setRotateDirection] = useState("-rotate-45");
+
+  let rotated = false;
   useEffect(() => {
     const handleMouseMove = (event: any) => {
       const { movementX, movementY }: any = event;
 
-      if (movementX < 0 && !movementY) {
-        setMouseDirectionX(`translate-x-[60px]  `);
-      } else if (movementX > 0 && !movementY) {
-        setMouseDirectionX(`translate-x-[-60px] `);
-      } else if (!movementX && movementY > 0) {
-        setMouseDirectionY(`translate-y-[-60px] `);
-      } else if (!movementX && movementY < 0) {
-        setMouseDirectionY(`translate-y-[60px] `);
-      } else if (movementX < 0 && movementY < 0) {
-        setMouseDirectionY(`translate-y-[60px] `);
-        setMouseDirectionX(`translate-x-[60px] `);
+      if (movementX < 0 && movementY < 0) {
+        setMouseDirectionY(`lg:translate-y-[40px]`);
+        setMouseDirectionX(`lg:translate-x-[40px] `);
       } else if (movementX > 0 && movementY < 0) {
-        setMouseDirectionY(`translate-y-[60px] `);
-        setMouseDirectionX(`-translate-x-[60px]`);
+        setMouseDirectionY(`lg:translate-y-[40px] `);
+        setMouseDirectionX(`lg:-translate-x-[40px]`);
       } else if (movementX > 0 && movementY > 0) {
-        setMouseDirectionY(`-translate-y-[60px] `);
-        setMouseDirectionX(`-translate-x-[60px]`);
+        setMouseDirectionY(`lg:-translate-y-[40px]`);
+        setMouseDirectionX(`lg:-translate-x-[40px]`);
       } else if (movementX < 0 && movementY > 0) {
-        setMouseDirectionY(`-translate-y-[60px] `);
-        setMouseDirectionX(`translate-x-[60px] `);
+        setMouseDirectionY(`lg:-translate-y-[40px] `);
+        setMouseDirectionX(`lg:translate-x-[40px] `);
+      }
+      if (rotated === false) {
+        setRotateDirection((prev) =>
+          prev === "-rotate-45" ? "rotate-45" : "-rotate-45"
+        );
+        rotated = true;
+        setTimeout(() => {
+          rotated = false;
+        }, 3000);
       }
     };
 
@@ -51,12 +55,12 @@ const index = () => {
   }, []);
 
   return (
-    <section className="px-40 grid grid-cols-12 items-center  gap-20 ">
-      <div className="flex flex-col col-span-5">
+    <section className=" px-6  lg:px-24 grid lg:grid-cols-12 items-center lg:gap-12">
+      <div className="flex flex-col lg:col-span-5">
         <article className="mb-6 z-50">
-          <p className="text-lg text-[#E5E9F0]">Hi, I am</p>
-          <h1 className="text-5xl mb-2">Çağan Büyükavcılar</h1>
-          <h2 className="flex items-center gap-1 text-secondary-blue  text-2xl">
+          <p className="text-base lg:text-lg text-[#E5E9F0]">Hi, I am</p>
+          <h1 className="text-3xl lg:text-5xl mb-2">Çağan Büyükavcılar</h1>
+          <h2 className="flex items-center gap-1 text-secondary-blue text-lg  lg:text-2xl">
             {`>`}
             <Typewriter
               options={{
@@ -80,7 +84,7 @@ const index = () => {
             />
           </h2>
 
-          <p className="mt-6 text-secondary-gray">
+          <p className="text-sm lg:text-base mt-6 text-gray-300 ">
             I am a developer with years of industry experience building
             responsive, mobile-first websites and web applications for local
             businesses and start-up companies. I specialize in JavaScript and
@@ -88,32 +92,45 @@ const index = () => {
             Tailwind CSS.
           </p>
         </article>
-        {/* <button className="px-6 py-3 rounded-2xl bg-secondary-gray bg-opacity-10 hover:bg-opacity-30 transition-all duration-300 ease-out">
-          Projects
-        </button> */}
       </div>
-      <div className="relative flex items-center justify-center  h-full col-span-7">
+      <div className=" relative flex lg:items-center lg:justify-center h-full lg:col-span-7 ">
         <div
-          className={`${mouseDirectionX} ${mouseDirectionY} absolute z-10  transition-all duration-[5s] ease-out`}
+          className={`${mouseDirectionX} ${mouseDirectionY} ${rotateDirection} relative lg:absolute z-10  transition-all duration-[7s] ease-out`}
         >
-          <div className="relative flex gap-1">
-            <div className="absolute top-20 left-12">
-              <Hexagon image={nextIcon.src} />
+          <div className="relative flex  flex-wrap lg:flex-nowrap gap-2 lg:gap-1 ">
+            <div className="lg:absolute top-20 left-12">
+              <Hexagon link="https://nextjs.org/" image={nextIcon.src} />
             </div>
-            <Hexagon image={reactIcon.src} />
-            <Hexagon image={nodeIcon.src} />
-            <div className="absolute -top-20 left-[8.8rem]">
-              <Hexagon image={tailwindIcon.src} />
+            <Hexagon link="https://reactjs.org/" image={reactIcon.src} />
+            <Hexagon link="https://nodejs.org/en/" image={nodeIcon.src} />
+            <div className="lg:absolute -top-20 left-[8.8rem]">
+              <Hexagon
+                link="https://tailwindcss.com/"
+                image={tailwindIcon.src}
+              />
             </div>
-            <Hexagon image={typescriptIcon.src} />
+            <Hexagon
+              link="https://www.typescriptlang.org/"
+              image={typescriptIcon.src}
+            />
 
-            <Hexagon image={javascriptIcon.src} />
-            <div className="absolute top-20 -right-12">
-              <Hexagon image={mongodbIcon.src} />
+            <Hexagon
+              link="https://www.javascript.com/"
+              image={javascriptIcon.src}
+            />
+            <div className="lg:absolute top-20 -right-12">
+              <Hexagon
+                link="https://www.mongodb.com/"
+                image={mongodbIcon.src}
+              />
             </div>
-            <Hexagon image={firebaseIcon.src} />
+            <Hexagon
+              link="https://firebase.google.com/"
+              image={firebaseIcon.src}
+            />
           </div>
         </div>
+
         <BackgroundSpinningAnimation />
       </div>
     </section>
