@@ -1,12 +1,10 @@
-import type { NextPage } from "next";
 import Head from "next/head";
+import React, { useEffect, useState } from "react";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import HeroSection from "../components/HeroSection";
-import { useEffect, useState } from "react";
 
-const Home: NextPage = () => {
+const ContactMe = () => {
   const [showScreen, setShowScreen] = useState(false);
   useEffect(() => {
     setShowScreen(true);
@@ -29,7 +27,11 @@ const Home: NextPage = () => {
           } flex flex-col overflow-hidden  justify-between max-w-[120rem] mx-auto bg-primary-light-blue rounded-lg h-[calc(100vh_-_5rem)] border border-primary-border transition-all duration-500 ease-out`}
         >
           <Header />
-          <HeroSection />
+          <div className="flex w-full h-full items-center justify-center">
+            <h2 className="text-2xl lg:text-5xl animate-pulse text-white">
+              Work In Progress...
+            </h2>
+          </div>
           <Footer />
         </div>
       </main>
@@ -37,4 +39,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default ContactMe;

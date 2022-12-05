@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
-import BackgroundSpinningAnimation from "./BackgroundSpinningAnimation";
+import BackgroundSpinningAnimation from "../BackgroundSpinningAnimation";
 import CodeSnippetPersonClass from "./CodeSnippetPersonClass";
 import nextIcon from "../../assets/next.png";
 import reactIcon from "../../assets/react.png";

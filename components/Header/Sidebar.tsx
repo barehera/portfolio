@@ -32,9 +32,9 @@ const Sidebar = ({ setShowSidebar, showSidebar }: any) => {
           </div>
           <nav className="h-full w-full ">
             <ul className="flex flex-col w-full  ">
-              <NavLink label="_about-me" selected={true} />
-              <NavLink label="_projects" selected={false} />
-              <NavLink label="_contact-me" selected={false} />
+              <NavLink label="_about-me" link="/" />
+              <NavLink label="_projects" link="/projects" />
+              <NavLink label="_contact-me" link="/contact-me" />
             </ul>
           </nav>
         </>

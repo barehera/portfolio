@@ -1,12 +1,10 @@
-import type { NextPage } from "next";
 import Head from "next/head";
-
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import HeroSection from "../components/HeroSection";
-import { useEffect, useState } from "react";
+import ProjectsSection from "../components/ProjectsSection";
 
-const Home: NextPage = () => {
+const projects = () => {
   const [showScreen, setShowScreen] = useState(false);
   useEffect(() => {
     setShowScreen(true);
@@ -26,10 +24,10 @@ const Home: NextPage = () => {
         <div
           className={`${
             showScreen ? "scale-100 opacity-100" : "scale-0 opacity-0"
-          } flex flex-col overflow-hidden  justify-between max-w-[120rem] mx-auto bg-primary-light-blue rounded-lg h-[calc(100vh_-_5rem)] border border-primary-border transition-all duration-500 ease-out`}
+          } flex flex-col overflow-hidden justify-between max-w-[120rem] mx-auto bg-primary-light-blue rounded-lg h-[calc(100vh_-_5rem)] border border-primary-border transition-all duration-500 ease-out`}
         >
           <Header />
-          <HeroSection />
+          <ProjectsSection />
           <Footer />
         </div>
       </main>
@@ -37,4 +35,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default projects;

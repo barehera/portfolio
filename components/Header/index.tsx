@@ -11,12 +11,10 @@ const index = () => {
       <div className="flex items-center pl-6 h-full   text-lables text-secondary-gray border-b lg:border-r pr-6 lg:pr-24 border-primary-border rounded-tl-lg whitespace-nowrap">
         cagan-buyukavcilar
       </div>
-      <nav className="h-full hidden lg:block">
-        <ul className="flex items-center h-full">
-          <NavLink label="_about-me" selected={true} />
-          <NavLink label="_projects" selected={false} />
-          <NavLink label="_contact-me" selected={false} />
-        </ul>
+      <nav className="h-full hidden lg:flex items-center ">
+        <NavLink label="_about-me" link="/" />
+        <NavLink label="_projects" link="/projects" />
+        <NavLink label="_contact-me" link="/contact-me" />
       </nav>
       <div className="flex items-center px-6 justify-end flex-1 border-b border-primary-border h-full">
         <MenuIcon setShowSidebar={setShowSidebar} />
