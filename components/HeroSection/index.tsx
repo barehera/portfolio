@@ -85,11 +85,11 @@ const index = () => {
           </h2>
 
           <p className="text-sm lg:text-base mt-6 text-gray-300 ">
-            I am a developer with years of industry experience building
-            responsive, mobile-first websites and web applications for local
-            businesses and start-up companies. I specialize in JavaScript and
-            have professional experience working with React.js, Next.js and
-            Tailwind CSS.
+            I'm a front-end developer with expertise creating mobile-first,
+            responsive websites and web applications for small and emerging
+            enterprises. I'm an expert in JavaScript, and I've worked with React
+            professionally. Additionally, I have worked with Next, TypeScript,
+            and Firebase.
           </p>
         </article>
       </div>
