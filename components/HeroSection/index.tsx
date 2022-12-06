@@ -99,35 +99,20 @@ const index = () => {
         >
           <div className="relative flex  flex-wrap lg:flex-nowrap gap-2 lg:gap-1 ">
             <div className="lg:absolute top-20 left-12">
-              <Hexagon link="https://nextjs.org/" image={nextIcon.src} />
+              <Hexagon image={nextIcon.src} />
             </div>
-            <Hexagon link="https://reactjs.org/" image={reactIcon.src} />
-            <Hexagon link="https://nodejs.org/en/" image={nodeIcon.src} />
+            <Hexagon image={reactIcon.src} />
+            <Hexagon image={nodeIcon.src} />
             <div className="lg:absolute -top-20 left-[8.8rem]">
-              <Hexagon
-                link="https://tailwindcss.com/"
-                image={tailwindIcon.src}
-              />
+              <Hexagon image={tailwindIcon.src} />
             </div>
-            <Hexagon
-              link="https://www.typescriptlang.org/"
-              image={typescriptIcon.src}
-            />
+            <Hexagon image={typescriptIcon.src} />
 
-            <Hexagon
-              link="https://www.javascript.com/"
-              image={javascriptIcon.src}
-            />
+            <Hexagon image={javascriptIcon.src} />
             <div className="lg:absolute top-20 -right-12">
-              <Hexagon
-                link="https://www.mongodb.com/"
-                image={mongodbIcon.src}
-              />
+              <Hexagon image={mongodbIcon.src} />
             </div>
-            <Hexagon
-              link="https://firebase.google.com/"
-              image={firebaseIcon.src}
-            />
+            <Hexagon image={firebaseIcon.src} />
           </div>
         </div>
 
