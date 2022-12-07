@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProjectsSection from "../components/ProjectsSection";
+import BackgroundSpinningAnimation from "../components/BackgroundSpinningAnimation";
 
 const projects = () => {
   const [showScreen, setShowScreen] = useState(false);
@@ -28,6 +29,7 @@ const projects = () => {
         >
           <Header />
           <ProjectsSection />
+          <BackgroundSpinningAnimation />
           <Footer />
         </div>
       </main>
