@@ -1,21 +1,17 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React, { Dispatch } from "react";
 import { IProject } from "../../types";
 
 interface IProps {
-  setProjectDetailModalOpen: Dispatch<boolean>;
-  setSelectedProject: Dispatch<IProject | null>;
   project: IProject;
 }
 
-const ProjectCard = ({
-  project,
-  setSelectedProject,
-  setProjectDetailModalOpen,
-}: IProps) => {
+const ProjectCard = ({ project }: IProps) => {
+  const router = useRouter();
+
   const handleClick = () => {
-    setSelectedProject(project);
-    setProjectDetailModalOpen(true);
+    router.push(`/projects/${project.slug}`);
   };
 
   return (

@@ -1,9 +1,9 @@
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import ProjectsSection from "../components/ProjectsSection";
-import BackgroundSpinningAnimation from "../components/BackgroundSpinningAnimation";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import ProjectsSection from "../../components/ProjectsSection";
+import BackgroundSpinningAnimation from "../../components/BackgroundSpinningAnimation";
 
 const projects = () => {
   const [showScreen, setShowScreen] = useState(false);

@@ -34,7 +34,7 @@ const Sidebar = ({ setShowSidebar, showSidebar }: any) => {
             <ul className="flex flex-col w-full  ">
               <NavLink label="_about-me" link="/" />
               <NavLink label="_projects" link="/projects" />
-              <NavLink label="_contact-me" link="/contact-me" />
+              {/* <NavLink label="_contact-me" link="/contact-me" /> */}
             </ul>
           </nav>
         </>

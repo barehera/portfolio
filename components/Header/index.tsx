@@ -14,7 +14,7 @@ const index = () => {
       <nav className="h-full hidden lg:flex items-center ">
         <NavLink label="_about-me" link="/" />
         <NavLink label="_projects" link="/projects" />
-        <NavLink label="_contact-me" link="/contact-me" />
+        {/* <NavLink label="_contact-me" link="/contact-me" /> */}
       </nav>
       <div className="flex items-center px-6 justify-end flex-1 border-b border-primary-border h-full">
         <MenuIcon setShowSidebar={setShowSidebar} />

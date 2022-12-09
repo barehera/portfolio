@@ -85,11 +85,12 @@ const index = () => {
           </h2>
 
           <p className="text-sm lg:text-base mt-6 text-gray-300 ">
-            I'm a front-end developer with expertise creating mobile-first,
-            responsive websites and web applications for small and emerging
-            enterprises. I'm an expert in JavaScript, and I've worked with React
-            professionally. Additionally, I have worked with Next, TypeScript,
-            and Firebase.
+            A developer with expertise and a love for developing intuitive and
+            user-friendly web applications. Proficient in modern front-end
+            technologies. Strong ability to translate design concepts into
+            elegant and functional user interfaces. Seeking a challenging
+            position at a forward-thinking company where I can continue to grow
+            and develop my skills.
           </p>
         </article>
       </div>
