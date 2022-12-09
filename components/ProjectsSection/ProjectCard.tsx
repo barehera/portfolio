@@ -23,7 +23,7 @@ const ProjectCard = ({
       onClick={handleClick}
       className="flex flex-col relative w-full bg-primary-dark-blue group rounded-xl overflow-hidden hover:scale-[1.02]  transition-all duration-300 ease-out cursor-pointer"
     >
-      <div className="relative w-full h-[15rem] ">
+      <div className="relative w-full h-[12rem] ">
         <Image
           priority
           quality={100}
@@ -31,7 +31,7 @@ const ProjectCard = ({
           src={project?.image}
           className="object-top group-hover:object-bottom transition-all duration-[4s] ease-in-out object-cover w-full h-full"
           width={10000}
-          height={10000}
+          height={50}
         />
         <div className="w-full h-full  absolute top-0 bg-primary-dark-blue group-hover:bg-opacity-0 bg-opacity-80 transition-all duration-300 ease-out"></div>
       </div>
@@ -42,7 +42,7 @@ const ProjectCard = ({
           </h2>
 
           <p className="text-gray-300 mb-2  text-sm">
-            {project?.description?.slice(0, 140)}...
+            {project?.description?.slice(0, 200)}...
           </p>
           <div className="flex items-center gap-1 flex-wrap my-2">
             {project?.skills.map((skill) => (
@@ -52,9 +52,6 @@ const ProjectCard = ({
             ))}
           </div>
         </div>
-        {/* <button className="text-xs lg:text-sm mt-2 px-6 py-2 rounded-lg bg-primary-border hover:opacity-75 transition-all duration-300 ease-out">
-          Details
-        </button> */}
       </div>
     </div>
   );

@@ -18,7 +18,7 @@ const projects = () => {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>Projects</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="px-4 py-10 bg-primary-dark min-h-screen text-white select-none overflow-hidden">

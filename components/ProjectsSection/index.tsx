@@ -18,7 +18,7 @@ const index = () => {
 
   const getProjects = async () => {
     setLoading(true);
-    const q = query(collection(db, "projects"), orderBy("description", "desc"));
+    const q = query(collection(db, "projects"), orderBy("sort", "asc"));
 
     const querySnapshot = await getDocs(q);
     setProjects([]);
