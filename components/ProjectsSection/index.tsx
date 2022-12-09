@@ -40,11 +40,11 @@ const index = () => {
 
   return (
     <>
-      <ProjectDetailModal
+      {/* <ProjectDetailModal
         open={projectDetailModalOpen}
         setOpen={setProjectDetailModalOpen}
         selectedProject={selectedProject}
-      />
+      /> */}
       <section className=" px-6 lg:px-24 py-6 lg:py-12 h-full overflow-auto scrollbar-thin scrollbar-track-primary-dark-blue scrollbar-thumb-secondary-green">
         <header className="w-full flex flex-col gap-1 items-center justify-center mb-12 mt-6">
           <h1 className="text-secondary-green font-bold text-2xl lg:text-3xl">
