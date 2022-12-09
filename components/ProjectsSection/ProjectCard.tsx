@@ -26,7 +26,6 @@ const ProjectCard = ({
       <div className="relative w-full h-[12rem] ">
         <Image
           priority
-          quality={100}
           alt={project?.title}
           src={project?.image}
           className="object-top group-hover:object-bottom transition-all duration-[4s] ease-in-out object-cover w-full h-full"
