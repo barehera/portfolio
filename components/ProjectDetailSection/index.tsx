@@ -41,7 +41,6 @@ const index = () => {
       setLoading(false);
     }, 200);
   };
-  console.log(project);
   useEffect(() => {
     if (projectSlug && !project) {
       getProjects();
@@ -72,12 +71,16 @@ const index = () => {
 
   const settings = {
     dots: true,
-    infinite: false,
-    speed: 500,
+    infinite: true,
+    arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <NextBtn></NextBtn>,
-    prevArrow: <PrevBtn></PrevBtn>,
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 3500,
+    cssEase: "linear",
+    // nextArrow: <NextBtn></NextBtn>,
+    // prevArrow: <PrevBtn></PrevBtn>,
     customPaging: (i: any) => (
       <div className="w-3 h-3  rounded-full bg-white bg-opacity-50 mt-2 hover:scale-105 hover:bg-opacity-70 transition-all duration-300 ease-out"></div>
     ),
@@ -99,7 +102,7 @@ const index = () => {
         {!loading ? (
           <article className="grid lg:grid-cols-2 gap-6 items-center">
             <div className="flex items-center justify-center">
-              <div className=" w-[85vw] lg:w-full relative ">
+              <div className=" w-[80vw] lg:w-full relative ">
                 <Slider {...settings}>
                   {project?.images?.map((image) => (
                     <div
