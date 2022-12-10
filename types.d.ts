@@ -3,6 +3,8 @@ export interface IProject {
   image: string;
   slug: string;
   skills: string[];
-  description?: string;
   id: string;
+  description?: string;
+  images?: string[];
+  link?: string;
 }

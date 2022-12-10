@@ -28,7 +28,7 @@ const index = () => {
     });
     setTimeout(() => {
       setLoading(false);
-    }, 100);
+    }, 200);
   };
 
   useEffect(() => {

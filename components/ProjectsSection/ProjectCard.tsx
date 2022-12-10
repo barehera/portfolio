@@ -21,6 +21,9 @@ const ProjectCard = ({ project }: IProps) => {
     >
       <div className="relative w-full h-[12rem] ">
         <Image
+          onLoad={() => {
+            console.log("LAODED");
+          }}
           priority
           alt={project?.title}
           src={project?.image}

@@ -18,7 +18,7 @@ const Sidebar = ({ setShowSidebar, showSidebar }: any) => {
     >
       {showSidebar ? (
         <>
-          <div className="flex items-center h-12 ">
+          <div className="flex items-center h-12">
             <div className="flex items-center pl-6 h-full  text-lables text-secondary-gray border-b lg:border-r pr-6 lg:pr-24 border-primary-border rounded-tl-lg whitespace-nowrap">
               cagan-buyukavcilar
             </div>
@@ -30,7 +30,7 @@ const Sidebar = ({ setShowSidebar, showSidebar }: any) => {
               />
             </div>
           </div>
-          <nav className="h-full w-full ">
+          <nav className="h-full w-full z-[99999] ">
             <ul className="flex flex-col w-full  ">
               <NavLink label="_about-me" link="/" />
               <NavLink label="_projects" link="/projects" />

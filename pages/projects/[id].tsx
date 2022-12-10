@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import BackgroundSpinningAnimation from "../../components/BackgroundSpinningAnimation";
+import ProjectDetailSection from "../../components/ProjectDetailSection";
 
 const SingleProject = () => {
   const [showScreen, setShowScreen] = useState(false);
@@ -28,6 +29,7 @@ const SingleProject = () => {
           } flex flex-col overflow-hidden justify-between max-w-[120rem] mx-auto bg-primary-light-blue rounded-lg h-[calc(100vh_-_5rem)] border border-primary-border transition-all duration-500 ease-out`}
         >
           <Header />
+          <ProjectDetailSection />
           <BackgroundSpinningAnimation />
           <Footer />
         </div>
