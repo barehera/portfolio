@@ -48,11 +48,13 @@ export default function Example({ open, setOpen, selectedImage }: IProps) {
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
               <div className="p-6">
-                <div className="relative p-10 bg-primary-light-blue text-white rounded-lg">
-                  <AiOutlineClose
-                    onClick={handleClose}
-                    className="text-2xl absolute top-2 right-2 hover:scale-105 hover:rotate-12 transition-all duration-300 ease-out cursor-pointer"
-                  />
+                <div className="relative  bg-primary-light-blue text-white rounded-lg">
+                  <div className="flex items-center justify-center group rounded-full bg-primary-dark-blue w-10 h-10 absolute top-2 right-2">
+                    <AiOutlineClose
+                      onClick={handleClose}
+                      className="text-2xl  group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 ease-out cursor-pointer"
+                    />
+                  </div>
                   <img
                     src={selectedImage}
                     alt=""

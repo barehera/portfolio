@@ -13,7 +13,7 @@ const Sidebar = ({ setShowSidebar, showSidebar }: any) => {
       className={`${
         showSidebar
           ? "w-full opacity-100 visible z-[999]"
-          : "w-0 opacity-0 invisible -z-10"
+          : "w-0 opacity-0 invisible"
       } fixed top-0 right-0 bg-primary-dark-blue  h-screen transition-all duration-500 ease-out`}
     >
       {showSidebar ? (
@@ -30,13 +30,13 @@ const Sidebar = ({ setShowSidebar, showSidebar }: any) => {
               />
             </div>
           </div>
-          <nav className="h-full w-full z-[99999] ">
+          <div className="">
             <ul className="flex flex-col w-full  ">
               <NavLink label="_about-me" link="/" />
               <NavLink label="_projects" link="/projects" />
               {/* <NavLink label="_contact-me" link="/contact-me" /> */}
             </ul>
-          </nav>
+          </div>
         </>
       ) : null}
     </aside>

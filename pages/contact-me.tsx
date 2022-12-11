@@ -3,21 +3,15 @@ import React, { useEffect, useState } from "react";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import useFirstAnimation from "../hooks/useFirstAnimation";
 
 const ContactMe = () => {
-  const [showScreen, setShowScreen] = useState(false);
-  useEffect(() => {
-    setShowScreen(true);
-
-    return () => {
-      setShowScreen(false);
-    };
-  }, []);
+  const showScreen = useFirstAnimation();
 
   return (
     <>
       <Head>
-        <title>Contact Me</title>
+        <title>Contact Me - Cagan Buyukavcilar</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="px-4 py-10 bg-primary-dark min-h-screen text-white select-none overflow-hidden">

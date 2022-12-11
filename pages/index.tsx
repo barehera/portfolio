@@ -5,21 +5,15 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
 import { useEffect, useState } from "react";
+import useFirstAnimation from "../hooks/useFirstAnimation";
 
 const Home: NextPage = () => {
-  const [showScreen, setShowScreen] = useState(false);
-  useEffect(() => {
-    setShowScreen(true);
-
-    return () => {
-      setShowScreen(false);
-    };
-  }, []);
+  const showScreen = useFirstAnimation();
 
   return (
     <>
       <Head>
-        <title>Cagan Buyukavcilar - Front-End Software Engineer</title>
+        <title>Software Engineer - Cagan Buyukavcilar</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="px-4 py-10 bg-primary-dark min-h-screen text-white select-none overflow-hidden">

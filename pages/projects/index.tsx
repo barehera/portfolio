@@ -3,22 +3,16 @@ import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import ProjectsSection from "../../components/ProjectsSection";
-import BackgroundSpinningAnimation from "../../components/BackgroundSpinningAnimation";
+import BackgroundSpinningAnimation from "../../components/UI/BackgroundSpinningAnimation";
+import useFirstAnimation from "../../hooks/useFirstAnimation";
 
 const projects = () => {
-  const [showScreen, setShowScreen] = useState(false);
-  useEffect(() => {
-    setShowScreen(true);
-
-    return () => {
-      setShowScreen(false);
-    };
-  }, []);
+  const showScreen = useFirstAnimation();
 
   return (
     <>
       <Head>
-        <title>Projects</title>
+        <title>Projects - Cagan Buyukavcilar</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="px-4 py-10 bg-primary-dark min-h-screen text-white select-none overflow-hidden">
@@ -29,8 +23,8 @@ const projects = () => {
         >
           <Header />
           <ProjectsSection />
-          <BackgroundSpinningAnimation />
           <Footer />
+          <BackgroundSpinningAnimation />
         </div>
       </main>
     </>

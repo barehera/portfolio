@@ -1,39 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ProjectCard from "./ProjectCard";
-import ProjectDetailModal from "./ProjectDetailModal";
 
-import { collection, query, where, getDocs, orderBy } from "firebase/firestore";
-import { db } from "../../lib/firebase";
 import { IProject } from "../../types";
-import Lottie from "lottie-react";
 
 import loadingLottie from "../../assets/lottie/loading.json";
+import useGetProjects from "../../hooks/useGetProjects";
+import LoadingLottie from "../UI/LoadingLottie";
 
 const index = () => {
-  const [projects, setProjects] = useState<IProject[] | []>([]);
-  const [loading, setLoading] = useState(false);
-
-  const getProjects = async () => {
-    setLoading(true);
-    const q = query(collection(db, "projects"), orderBy("sort", "asc"));
-
-    const querySnapshot = await getDocs(q);
-    setProjects([]);
-
-    querySnapshot.forEach((doc) => {
-      setProjects((projects: any) => [
-        ...projects,
-        { id: doc.id, ...doc.data() },
-      ]);
-    });
-    setTimeout(() => {
-      setLoading(false);
-    }, 200);
-  };
-
-  useEffect(() => {
-    getProjects();
-  }, []);
+  const { loading, projects } = useGetProjects();
 
   return (
     <>
@@ -46,6 +21,7 @@ const index = () => {
             // Selected projects I've worked on in the past.
           </p>
         </header>
+
         {!loading ? (
           <div className="flex flex-col md:grid md:grid-cols-2 2xl:grid-cols-3 gap-y-12 gap-x-6">
             {projects.map((project: IProject) => (
@@ -53,13 +29,7 @@ const index = () => {
             ))}
           </div>
         ) : (
-          <div className="flex items-center justify-center ">
-            <Lottie
-              animationData={loadingLottie}
-              loop={true}
-              className="w-full h-40 object-contain"
-            />
-          </div>
+          <LoadingLottie />
         )}
       </section>
     </>
