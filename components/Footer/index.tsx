@@ -34,15 +34,7 @@ const index = () => {
         >
           <AiFillGithub className="text-xl group-hover:scale-110 transition-all duration-300 ease-out" />
         </Link>
-        <Link
-          data-tip="E-Mail"
-          href="mailto:buyukavcilar.cagan@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`group flex items-center gap-2 text-sm text-secondary-gray px-3 border-r border-t border-primary-border h-full border-b-2 border-b-transparent hover:text-white   hover:border-b-accent-orange transition-all duration-300 ease-out cursor-pointer`}
-        >
-          <AiFillMail className="text-xl group-hover:scale-110 transition-all duration-300 ease-out" />
-        </Link>
+
         <Link
           data-tip="Upwork"
           href="https://www.upwork.com/freelancers/~01b4590684fa777f31"
@@ -51,6 +43,15 @@ const index = () => {
           className={`group flex items-center gap-2 text-sm text-secondary-gray px-3 border-r border-t border-primary-border h-full border-b-2 border-b-transparent hover:text-white   hover:border-b-accent-orange transition-all duration-300 ease-out cursor-pointer`}
         >
           <SiUpwork className="text-xl group-hover:scale-110 transition-all duration-300 ease-out" />
+        </Link>
+        <Link
+          data-tip="E-Mail"
+          href="mailto:buyukavcilar.cagan@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`group flex items-center gap-2 text-sm text-secondary-gray px-3 border-r border-t border-primary-border h-full border-b-2 border-b-transparent hover:text-white   hover:border-b-accent-orange transition-all duration-300 ease-out cursor-pointer`}
+        >
+          <AiFillMail className="text-xl group-hover:scale-110 transition-all duration-300 ease-out" />
         </Link>
       </nav>
       <div className="flex-1 border-t  border-primary-border h-full "></div>
