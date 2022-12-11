@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { AiOutlineFullscreen } from "react-icons/ai";
 import { IProject } from "../../types";
+import Image from "next/image";
 
 interface IProps {
   project: IProject | null;
@@ -76,14 +77,17 @@ const ImageSlider = ({
     <div className="flex items-center justify-center">
       <div className=" w-[80vw] lg:w-full relative ">
         <Slider {...settings}>
-          {project?.images?.map((image) => (
+          {project?.images?.map((image, index) => (
             <div
               className="flex items-center justify-center group relative "
               key={image}
             >
-              <img
+              <Image
                 src={image}
-                alt=""
+                width={10000}
+                height={10000}
+                priority={index === 1}
+                alt={project?.title}
                 className="w-full h-[24rem] lg:h-[40vh] object-contain "
               />
               <div

@@ -18,7 +18,9 @@ const SingleProject = () => {
   return (
     <>
       <Head>
-        <title>{project?.title} - Cagan Buyukavcilar</title>
+        <title>
+          {project ? `${project?.title} - Cagan Buyukavcilar` : "Loading..."}
+        </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="px-4 py-10 bg-primary-dark min-h-screen text-white select-none overflow-hidden">
