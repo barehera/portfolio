@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Software Engineer - Cagan Buyukavcilar</title>
+        <title>Front-End Developer - Cagan Buyukavcilar</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="px-4 py-10 bg-primary-dark min-h-screen text-white select-none overflow-hidden">
