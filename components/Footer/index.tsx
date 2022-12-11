@@ -1,7 +1,13 @@
 import Link from "next/link";
 import React from "react";
 
-import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
+import {
+  AiFillGithub,
+  AiFillLinkedin,
+  AiFillMail,
+  AiOutlineDownload,
+} from "react-icons/ai";
+import { SiUpwork } from "react-icons/si";
 
 const index = () => {
   return (
@@ -37,8 +43,17 @@ const index = () => {
         >
           <AiFillMail className="text-xl group-hover:scale-110 transition-all duration-300 ease-out" />
         </Link>
+        <Link
+          data-tip="Upwork"
+          href="https://www.upwork.com/freelancers/~01b4590684fa777f31"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`group flex items-center gap-2 text-sm text-secondary-gray px-3 border-r border-t border-primary-border h-full border-b-2 border-b-transparent hover:text-white   hover:border-b-accent-orange transition-all duration-300 ease-out cursor-pointer`}
+        >
+          <SiUpwork className="text-xl group-hover:scale-110 transition-all duration-300 ease-out" />
+        </Link>
       </nav>
-      <div className="flex-1 border-t border-primary-border h-full "></div>
+      <div className="flex-1 border-t  border-primary-border h-full "></div>
     </footer>
   );
 };
