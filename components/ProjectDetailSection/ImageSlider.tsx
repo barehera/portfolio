@@ -77,7 +77,7 @@ const ImageSlider = ({
     <div className="flex items-center justify-center">
       <div className=" w-[80vw] lg:w-full relative ">
         <Slider {...settings}>
-          {project?.images?.map((image, index) => (
+          {project?.images?.map((image) => (
             <div
               className="flex items-center justify-center group relative "
               key={image}
@@ -86,7 +86,6 @@ const ImageSlider = ({
                 src={image}
                 width={10000}
                 height={10000}
-                priority={index === 1}
                 alt={project?.title}
                 className="w-full h-[24rem] lg:h-[40vh] object-contain "
               />
