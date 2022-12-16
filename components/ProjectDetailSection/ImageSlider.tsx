@@ -47,10 +47,7 @@ const ImageSlider = ({
     arrows: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
     speed: 500,
-    autoplaySpeed: 3500,
-    cssEase: "linear",
     nextArrow: <NextBtn></NextBtn>,
     prevArrow: <PrevBtn></PrevBtn>,
     beforeChange: (prev: any, next: any) => {
