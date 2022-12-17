@@ -28,7 +28,7 @@ const ProjectDetails = ({ project }: IProps) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="flex items-center justify-center w-full gap-1 bg-primary-dark bg-opacity-30 px-6 py-2 rounded-lg text-sm hover:bg-opacity-50 hover:-translate-y-[2px] hover:shadow-xl transition-all duration-300 ease-out">
+          <button className="max-w-max flex items-center justify-center w-full gap-1 bg-primary-dark bg-opacity-30 px-6 py-2 rounded-lg text-sm hover:bg-opacity-50 hover:-translate-y-[2px] hover:shadow-xl transition-all duration-300 ease-out">
             <AiFillEye className="text-lg" /> Live Preview
           </button>
         </Link>
