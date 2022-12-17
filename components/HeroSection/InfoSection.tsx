@@ -28,7 +28,7 @@ const InfoSection = () => {
           technologies. Strong ability to translate design concepts into elegant
           and functional user interfaces.
         </p>
-        <Link
+        {/* <Link
           href="mailto:buyukavcilar.cagan@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
@@ -36,7 +36,7 @@ const InfoSection = () => {
           <div className="hidden lg:block bg-opacity-50 hover:bg-opacity-100 bg-secondary-blue  mt-6 border max-w-max border-primary-border  hover:-translate-y-1 hover:shadow-xl transition-all duration-300 ease-out  px-16 py-2 rounded">
             _say-hi
           </div>
-        </Link>
+        </Link> */}
       </article>
     </div>
   );
