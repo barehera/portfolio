@@ -12,20 +12,11 @@ const InfoSection = () => {
           <Typewriter
             options={{
               cursor: "",
-              loop: true,
             }}
             onInit={(typewriter) => {
               typewriter
                 .changeDelay(100)
-                .typeString("Front-end developer")
-                .pauseFor(1000)
-                .deleteAll()
-                .typeString("Back-end developer")
-                .pauseFor(1000)
-                .deleteAll()
-                .typeString("Full-stack developer")
-                .pauseFor(1000)
-                .deleteAll()
+                .typeString("Front-End Developer")
                 .start();
             }}
           />
