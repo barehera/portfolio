@@ -59,22 +59,21 @@ const SkillsSection = () => {
       >
         <div className="relative flex  flex-wrap lg:flex-nowrap gap-2 lg:gap-1 ">
           <Hexagon image={reactIcon.src} absolute={false} />
-          <Hexagon image={nodeIcon.src} absolute={false} />
-          <Hexagon image={typescriptIcon.src} absolute={false} />
-          <Hexagon image={javascriptIcon.src} absolute={false} />
-          <Hexagon image={firebaseIcon.src} absolute={false} />
-
           <Hexagon
             image={nextIcon.src}
             position="top-20 left-12"
             absolute={true}
           />
-
           <Hexagon
             image={tailwindIcon.src}
             absolute={true}
             position="-top-20 left-[8.8rem]"
           />
+          <Hexagon image={javascriptIcon.src} absolute={false} />
+          <Hexagon image={typescriptIcon.src} absolute={false} />
+          <Hexagon image={nodeIcon.src} absolute={false} />
+          <Hexagon image={firebaseIcon.src} absolute={false} />
+
           <Hexagon
             image={mongodbIcon.src}
             absolute={true}

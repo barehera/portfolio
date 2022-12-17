@@ -47,13 +47,12 @@ const index = () => {
       </nav>
       <div className="flex-1 border-t  border-primary-border h-full "></div>
       <Link
-        data-tip="E-Mail"
         href="mailto:buyukavcilar.cagan@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
-        className={`lg:hidden group flex items-center gap-2 text-sm text-secondary-gray px-3 border-l border-t border-primary-border h-full border-b-2 border-b-transparent hover:text-white   hover:border-b-accent-orange transition-all duration-300 ease-out cursor-pointer`}
+        className={`lg:hidden group flex items-center gap-2 text-sm  text-secondary-gray px-3 border-l border-t border-primary-border h-full border-b-2 border-b-transparent hover:text-white   hover:border-b-accent-orange transition-all duration-300 ease-out cursor-pointer`}
       >
-        _contact-me
+        _say-hi
       </Link>
     </footer>
   );

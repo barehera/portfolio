@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 import MenuIcon from "./MenuIcon";
 import NavLink from "./NavLink";
@@ -8,9 +9,12 @@ const index = () => {
 
   return (
     <header className="flex items-center h-12 z-[99] ">
-      <div className="flex items-center pl-6 h-full   text-lables text-secondary-gray border-b lg:border-r pr-6 lg:pr-24 border-primary-border rounded-tl-lg whitespace-nowrap">
+      <Link
+        href="/"
+        className="flex items-center pl-6 h-full   text-lables text-secondary-gray border-b lg:border-r pr-6 lg:pr-24 border-primary-border rounded-tl-lg whitespace-nowrap"
+      >
         cagan-buyukavcilar
-      </div>
+      </Link>
       <nav className="h-full hidden lg:flex items-center ">
         <NavLink label="_about-me" link="/" />
         <NavLink label="_projects" link="/projects" />

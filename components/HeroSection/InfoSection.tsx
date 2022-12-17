@@ -33,8 +33,8 @@ const InfoSection = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="hidden lg:block mt-6 border max-w-max border-primary-border hover:border-accent-orange hover:-translate-y-1 hover:shadow-xl transition-all duration-300 ease-out text-secondary-gray hover:text-white px-12 py-2 rounded">
-            _contact-me
+          <div className="hidden lg:block bg-opacity-50 hover:bg-opacity-100 bg-secondary-blue  mt-6 border max-w-max border-primary-border  hover:-translate-y-1 hover:shadow-xl transition-all duration-300 ease-out  px-16 py-2 rounded">
+            _say-hi
           </div>
         </Link>
       </article>
