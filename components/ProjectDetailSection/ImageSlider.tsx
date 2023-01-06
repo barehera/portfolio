@@ -85,6 +85,7 @@ const ImageSlider = ({
                 height={10000}
                 alt={project?.title}
                 className="w-full h-[24rem] lg:h-[40vh] object-contain "
+                priority
               />
               <div
                 onClick={() => handleImageFullScreenClick(image)}
